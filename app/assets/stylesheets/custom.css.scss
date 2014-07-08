@@ -1,0 +1,319 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+$orangeRed: #ff4500;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 140px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  margin-left: -22px;
+  margin-bottom: 10px;
+  font-size: 3.2em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 30px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: $orangeRed;
+    text-decoration: none;
+  }
+}
+
+#copy{
+  float: left;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 2.0em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 36px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: $orangeRed;
+    text-decoration: none;
+  }
+}
+
+.pull-right{
+  padding-top: 44px;
+  font-size: 1.24em;
+}
+
+.navbar-inner {
+  height: 100px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+
+/* helpposts */
+
+.helpposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+.title {
+  color: #45494b;
+  font-size:  26px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  display: block;
+}
+.user{
+  color: #006f83;
+  opacity: 0.8;
+  line-height: 42px;
+  font-size:  15px;
+  font-weight: bold;
+  display: block;
+
+}
+.timestamp {
+  display: block;
+  color: $grayLight;
+  margin-bottom: 5px;
+}
+.catch_image{
+  margin: 0px;
+  margin: 0px;
+  border: none;
+  max-width: none;
+  width: 978px;
+  height: 400px;
+  left: 0px;
+  top: -1px;
+}
+.desired_time{
+  display: block;
+  font-weight: bold;
+  color: #45494b;
+}
+.desired_place{
+  display: block;
+  font-weight: bold;
+  color: #45494b;
+  margin-bottom: 10px;
+}
+.reward{
+  margin-bottom: 16px;
+  display: block;
+  color: #45494b;
+  font-size:  20px;
+}
+.detail{
+  margin-bottom: 16px;
+  display: block;
+  color: #45494b;
+  font-size:  15px;
+}
+
+//コメント
+.comments{
+   list-style: none;
+   margin: 10px 0 0 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}

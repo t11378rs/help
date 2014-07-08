@@ -1,0 +1,12 @@
+<%= form_for(@helppost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "HELP!のタイトル" %>
+    <%= f.file_field :image_url, placeholder: "画像のアップロード"%>
+    <%= f.text_field :desired_time, placeholder: "助けてもらう希望時間" %>
+    <%= f.text_field :desired_place, placeholder: "助けてもらう希望場所" %>
+    <%= f.text_field :reward, placeholder: "助けてもらった時のお礼" %>
+    <%= f.text_area :detail, placeholder: "HELP!の詳細" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

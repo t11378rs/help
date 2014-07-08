@@ -1,0 +1,18 @@
+<li>
+  <span class="reward">謝礼：<%= helppost.reward %></span>
+  <span class="title">
+    <%=link_to helppost.title, helppost %>
+  </span>
+  <span class="catch_image"><%= image_tag helppost.image_url, :size => '300x600'%></span>
+  <span class="desired_time">希望時間：<%= helppost.desired_time %></span>
+  <span class="desired_place">希望場所：<%= helppost.desired_place %></span>
+  <span class="detail">詳細：<br><%= helppost.detail %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(helppost.created_at) %> ago.
+  </span>
+  <% if current_user?(helppost.user) %>
+    <%= link_to "delete", helppost, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: helppost.title %>
+  <% end %>
+</li>
