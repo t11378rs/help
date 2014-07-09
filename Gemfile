@@ -4,6 +4,27 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
+gem 'therubyracer', '0.12.0', :platforms => :ruby
+gem 'unicorn'
+#from here, for c4sa
+=begin
+gem 'rails', '4.0.2'
+gem 'mysql2'
+
+group :assets do
+  gem 'sass-rails',   '~> 4.0.1'
+  gem 'coffee-rails', '~> 4.0.1'
+  gem 'therubyracer', '0.12.0', :platforms => :ruby
+  gem 'uglifier', '>= 2.3.2'
+end
+
+gem 'jquery-rails'
+
+gem 'unicorn'
+=end
+#to
+
+
 gem 'carrierwave'
 gem 'rmagick'
 
@@ -46,7 +67,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'therubyracer', platforms: :ruby
+	#gem 'therubyracer', platforms: :ruby
 gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri', '~> 1.6.1'
 gem 'rails-i18n', '~> 4.0.1'
